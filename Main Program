@@ -16,3 +16,21 @@ int main() {
             pesan[i] += 32;
         }
     }
+
+    cout << "Pilih operasi (1=Enkripsi, 2=Dekripsi): ";
+    cin >> operasi;
+    
+    cout << "Masukkan nilai pergeseran (x): ";
+    cin >> pergeseran;
+    
+    if (operasi == 1) {
+        enkripsi(pesan, pergeseran);
+        cout << "Pesan terenkripsi: " << pesan << endl;
+    } else if (operasi == 2) {
+        dekripsi(pesan, pergeseran);
+        cout << "Pesan terdekripsi: " << pesan << endl;
+    } else {
+        cout << "Operasi tidak valid!" << endl;
+    }
+    return 0;
+}
