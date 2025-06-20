@@ -1,1 +1,12 @@
+//dekripsi.h
+#include <iostream>
+#include <cstring>
+#include <vector>
+
+using namespace std;
+
+char Karakter(char c, int pergeseran) {
+    if (c < 'a' || c > 'z') return c;
+    return 'a' + (c - 'a' + (pergeseran % 26 + 26) % 26) % 26;
+}
 
