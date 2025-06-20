@@ -17,4 +17,4 @@ Setiap karakter ganjil dalam pesan akan digeser x kali, sedangkan karakter genap
 Dekripsi harus mengikuti logika kebalikannya.  
 
 Screenshot hasil program:  
-https://drive.google.com/file/d/1XNkfF9PNzQL37preRR0Cz9lt0JC6hyiM/view?usp=sharing  
+
