@@ -3,3 +3,16 @@
 #include "dekripsi.h"
 
 using namespace std;
+
+int main() {
+    char pesan[100];
+    int operasi, pergeseran;
+    
+    cout << "Masukkan pesan: ";
+    cin >> pesan;
+    
+    for (int i = 0; pesan[i]; i++) {
+        if (pesan[i] >= 'A' && pesan[i] <= 'Z') {
+            pesan[i] += 32;
+        }
+    }
