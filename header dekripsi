@@ -10,3 +10,32 @@ char Karakter(char c, int pergeseran) {
     return 'a' + (c - 'a' + (pergeseran % 26 + 26) % 26) % 26;
 }
 
+void balik(vector<char>& pesan) {
+    int len = pesan.size();
+    for (int i = 0; i < len / 2; i++) {
+        char temp = pesan[i];
+        pesan[i] = pesan[len - i - 1];
+        pesan[len - i - 1] = temp;
+    }
+
+}
+
+void dekripsi(char* pesan, int pergeseran) {
+    int panjang = strlen(pesan);
+    if (panjang == 0) return;
+
+    vector<char> vPesan(pesan, pesan + panjang);
+
+    for (int i = 0; i < panjang; i++) {
+        int shift = (i % 2 == 0) ? -pergeseran : -2 * pergeseran;
+        vPesan[i] = Karakter(vPesan[i], shift);
+    }
+
+    if (panjang % 2 == 0) {
+        balik(vPesan);
+    }
+
+    for (int i = 0; i < panjang; i++) {
+        pesan[i] = vPesan[i];
+    }
+}
